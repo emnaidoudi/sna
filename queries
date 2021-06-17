@@ -1,0 +1,11 @@
+select emp.idemp, topic.idtopic, sum(fact.score) as total_score, count(post.idpost) as nb_posts
+        FROM Dimemployee as emp, Dimpost as post, Factanalysis as fact, Dimtopic topic
+        where fact.idpost = post.idpost and fact.idemp = emp.idemp and post.idtopic = topic.idtopic
+        group by emp.idemp, topic.idtopic
+
+
+
+select emp.idemp, CONCAT(emp.first_name, ' ', emp.last_name) as name, count(post.idpost) ,topic.assigned_name, TRUNC(sum(fact.score)/count(post.idpost),1) as SCORE
+        FROM Dimemployee as emp, Dimpost as post, Factanalysis as fact, Dimtopic topic
+        where fact.idpost = post.idpost and fact.idemp = emp.idemp and post.idtopic = topic.idtopic
+        group by emp.idemp, topic.idtopic

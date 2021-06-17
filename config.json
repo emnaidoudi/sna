@@ -1,0 +1,15 @@
+{
+    "sql_database":{
+        "POSTGRES_HOST":"localhost",
+        "POSTGRES_USER": "postgres",
+        "POSTGRES_PASSWORD":"123456789",
+        "POSTGRES_DB":"topic-detection"
+    },
+    "mongo_database":{
+        "MONGO_HOST":"localhost",
+        "MONGO_PORT":27017,
+        "MONGO_USER": "accretioadmin",
+        "MONGO_PASSWORD":"adminaccretio&2017",
+        "AUTH_SOURCE":"admin"
+    }
+}
